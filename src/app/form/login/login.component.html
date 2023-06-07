@@ -1,0 +1,80 @@
+<form class="user-form" [formGroup]="loginForm">
+    <label class="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter Your Name" formControlName="name"><br>
+    <span style="color: aliceblue;" *ngIf="name && name.invalid && name.touched  ">Please Enter the value first</span>
+    <br>
+    <div class="gender">
+        <label id="gender" id="gender">Gender</label>
+        <br>
+        <input type="radio" name="gender" value="male" formControlName="gender">
+        <label for="male" id='male' >Male</label><br>
+        <input type="radio"  name="gender" value="Female" formControlName="gender">
+        <label for="female" id="female">Female</label>
+        <span style="color: aliceblue;" *ngIf="gender && gender.invalid && gender.touched  ">Please Enter the value
+            first</span>
+        <br>
+        <label class="phone">Phone No.</label>
+        <input type="tel" id="name" name="phone" formControlName="phone" placeholder="Enter Your Number"><br>
+        <span style="color: aliceblue;" *ngIf="phone && phone.invalid && phone.touched  ">Please Enter the value
+            first</span>
+        <br>
+        <label class="email">Email</label>
+        <input type="email" id="name" name="email" placeholder="Enter Your Email" formControlName="email"><br>
+        <span style="color: aliceblue;" *ngIf="email && email.invalid && email.touched  ">Please Enter the value
+            first</span>
+        <br>
+        <label class="category">Category</label>
+        <select id="category" name="Category" formControlName="category">
+            <option value="">Select Category</option>
+            <option value="Genral">Genral</option>
+            <option value="OBC">"OBC"</option>
+            <option value="SC/ST">SC/ST</option>
+        </select><br>
+        <br>
+        <label class="Tech">Technologies</label><br>
+        <input type="checkbox" id="skill1" name="skill1" value="java" formControlName="java"  >
+        <label for="skill1">java</label><br>
+        <input type="checkbox" id="skill2" name="skill2" value="css" formControlName="css" >
+        <label for="skill1">CSS</label><br>
+        <input type="checkbox" id="skill3" name="skill3" value="python" formControlName="python">
+        <label for="skill1">Python</label><br>
+        <input type="checkbox" id="skill4" name="skill4" value="html" formControlName="html">
+        <label for="skill1">html</label><br>
+        <input type="checkbox" id="skill5" name="skill5" value="Js" formControlName="js" >
+        <label for="skill1">JS</label><br>
+        <br>
+        <label for="pic">Upload Your Picture</label><br>
+        <input id="image" type="file" name="profile_photo" placeholder="Photo" (change)="selectFile($event)" capture>
+        <br>
+        <br>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Preview
+        </button> -->
+        <button type="submit" (click)="call()"> Check </button>
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>Name: {{loginForm.value.name}} </strong><br>
+                        <strong>Gender :{{loginForm.value.gender}}</strong><br>
+                        <strong>Phone :{{loginForm.value.phone}}</strong><br>
+                        <strong>Email :{{loginForm.value.email}}</strong><br>
+                        <strong>Category :{{loginForm.value.category}}</strong>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button submit" class="btn btn-primary" data-bs-dismiss="modal" >Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</form>

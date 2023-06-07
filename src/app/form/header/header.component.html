@@ -1,0 +1,13 @@
+<div class="viewed" *ngFor="let data of view">
+    <div class="card" style="width: 18rem;" *ngIf="display">
+        <img src="{{data.url}}" class="card-img-top" >
+        <div class="card-body" >
+            <p class="card-text" >
+                {{data.name}}<br>
+                {{data.gender}}<br>
+                {{data.phone}}<br>
+                {{data.email}}<br>
+                {{data.category}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"    (click)="activeModal.dismiss('Cross click')"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong> Name: {{this.data.name}}</strong>
+                        <strong>Gender :{{this.data.gender}}</strong><br>
+                        <strong>Phone :{{this.data.phone}}</strong><br>
+                        <strong>Email :{{this.data.email}}</strong><br>
+                        <strong>Category:{{this.data.category}}</strong><br>
+                        <strong>Technologies: <span *ngIf="this.data.java">Java</span>
+                            <br><span *ngIf="this.data.css">Css</span>
+                            <br><span *ngIf="this.data.python">Python</span>
+                            <br><span *ngIf="this.data.html">Html</span>
+                            <br><span *ngIf="this.data.JS">JS</span></strong><br>
+                        <img src="{{this.data.url}}" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  (click)="activeModal.dismiss('Cross click')">Close</button>
+                        <button type="button submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="submit()" >Save changes</button>
+                    </div>
+                </div>
+
+
